@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+		<meta name="Generator" content="[3DPageFlip] at http://3dpageflip.com/" />
+        <meta name="keywords" content="The complete Gnostic Book of Changes by James DeKorne." />
+        <meta name="description" content="The complete Gnostic Book of Changes by James DeKorne." />
+        <style type="text/css" media="screen">
+			html, body	{ height:100%; }
+			body { margin:0; padding:0; overflow:auto; text-align:center;
+			       background-color: #FFFFFF; }
+			#flashContent { display:none; }
+			.objMedia{
+				width:100%;
+				height:100%;
+			}
+        </style>
+
+		<script type="text/javascript">
+			function $(id){
+				return typeof(id)=="string"?document.getElementById(id):id;
+			}
+			function SetTitle(val){
+				document.title=val;
+			}
+
+			function goToPage(PageID){
+				$('FlipBook3DMain').GoToPage(PageID);
+			}
+
+			function getParameter(param)
+			{
+				var query = window.location.search;
+				var iLen = param.length;
+				var iStart = query.indexOf(param);
+				if (iStart == -1)
+				   return "";
+				iStart += iLen + 1;
+				var iEnd = query.indexOf("&", iStart);
+				if (iEnd == -1)
+				   return query.substring(iStart);
+				return query.substring(iStart, iEnd);
+			}
+
+			var IntervalResult;
+			function Init(){
+				var pageID=getParameter('p')
+				if(pageID!=''){
+					IntervalResult=setInterval(function(){
+						goToPage(parseInt(pageID));
+						clearInterval(IntervalResult);
+					},1000);
+				}
+			}
+
+			function SWFCallBack(Obj){
+				if(Obj.success){
+					var AObj=$("FlipBook3DMain");
+					AObj.tabIndex=0;
+					AObj.focus();
+				}
+			}
+
+
+		 var ua = navigator.userAgent.toLowerCase(),
+          platform = navigator.platform.toLowerCase(),
+          UA = ua.match(/(opera|ie|firefox|chrome|version)[\s\/:]([\w\d\.]+)?.*?(safari|version[\s\/:]([\w\d\.]+)|$)/) || [null, 'unknown', 0],
+          mode = UA[1] == 'ie' && document.documentMode;
+
+          var Browser = {
+          extend: Function.prototype.extend,
+          name: (UA[1] == 'version') ? UA[3] : UA[1],
+          version: mode || parseFloat((UA[1] == 'opera' && UA[4]) ? UA[4] : UA[2]),
+          Platform: {
+          name: ua.match(/ip(?:ad|od|hone)/) ? 'ios' : (ua.match(/(?:webos|android|bada|symbian|palm|blackberry)/) || platform.match(/mac|win|linux/) || ['other'])[0]
+          },
+          Features: {
+          xpath: !!(document.evaluate),
+          air: !!(window.runtime),
+          query: !!(document.querySelector),
+          json: !!(window.JSON)
+          },
+          Plugins: {}
+          };
+
+		  var mobileFolder = 'mobile';
+		  var dir = 'files';
+          if(Browser.Platform.name == 'android' || Browser.Platform.name == 'ios') window.location = mobileFolder+"/index.htmll";
+          if(Browser.Platform.name == 'webos' || Browser.Platform.name == 'bada' || Browser.Platform.name == 'symbian' || Browser.Platform.name == 'palm' || Browser.Platform.name == 'blackberry') window.location = dir+"/not_support.html";
+		</script>
+
+        <script type="text/javascript" src="files/swfobject.js"></script>
+        <script type="text/javascript">
+			var swfFileStr=dir+"/FlipBook3DMain.swf?URL="+encodeURIComponent(window.location.href)+"&search="+encodeURIComponent(window.location.search);
+            var swfVersionStr = "10.0.0";
+            var xiSwfUrlStr = dir+"/playerProductInstall.swf";
+            var flashvars = {URL:encodeURIComponent(window.location.href), search:encodeURIComponent(window.location.search)};
+            var params = {};
+            params.quality = "high";
+            params.bgcolor = "#FFFFFF";
+            params.allowscriptaccess = "sameDomain";
+            params.allowfullscreen = "true";
+            var attributes = {};
+            attributes.id = "FlipBook3DMain";
+            attributes.name = "FlipBook3DMain";
+            attributes.align = "middle";
+            swfobject.embedSWF(
+                swfFileStr, "flashContent",
+                "100%", "100%",
+                swfVersionStr, xiSwfUrlStr,
+                flashvars, params, attributes,SWFCallBack);
+			swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+        </script>
+    </head>
+    <body>
+        <!-- SWFObject's dynamic embed method replaces this alternative HTML content with Flash content when enough
+			 JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
+			 when JavaScript is disabled.
+		-->
+        <div id="flashContent">
+        	<p>
+	        	To view this page ensure that Adobe Flash Player version
+				10.0.0 or greater is installed.
+			</p>
+			<script type="text/javascript">
+				var pageHost = ((document.location.protocol == "https:") ? "https://" :	"http://");
+				document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='"
+								+ pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
+			</script>
+        </div>
+
+       	<noscript>
+            <object class="objMedia" id="FlipBook3DMain" type="application/x-shockwave-flash">
+                <param name="movie" value="files/FlipBook3DMain.swf" />
+				<Param name="classid" value="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#FFFFFF" />
+                <param name="allowScriptAccess" value="sameDomain" />
+                <param name="allowFullScreen" value="true" />
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="files/FlipBook3DMain.swf" class="objMedia" >
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#FFFFFF" />
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="true" />
+                <!--<![endif]-->
+                <!--[if gte IE 6]>-->
+                	<p>
+                		Either scripts and active content are not permitted to run or Adobe Flash Player version
+                		10.0.0 or greater is not installed.
+                	</p>
+                <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflashplayer">
+                        <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" />
+                    </a>
+                <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+	    </noscript>
+   </body>
+</html>
